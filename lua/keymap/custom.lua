@@ -17,8 +17,8 @@ local plug_map = {
 	["n|<leader>e"] = map_cr("NvimTreeToggle"):with_noremap():with_silent():with_desc("filetree: Toggle"),
 
     -- 全选
-	["n|<leader>a"] = map_cr("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
-	["n|<C-a>"] = map_cr("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
+	["n|<leader>a"] = map_cmd("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
+	["n|<C-a>"] = map_cmd("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
 
     -- Buffer 控制
 	["n|<leader>q"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),
