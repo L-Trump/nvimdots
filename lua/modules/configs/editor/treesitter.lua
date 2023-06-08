@@ -20,6 +20,7 @@ return vim.schedule_wrap(function()
 			"make",
 			"markdown",
 			"markdown_inline",
+            "matlab",
 			"python",
 			"rust",
 			"typescript",
@@ -34,6 +35,10 @@ return vim.schedule_wrap(function()
 					return true
 				end
 
+				if vim.tbl_contains({ "latex" }, ft) then
+					return true
+				end
+ 
 				local ok, is_large_file = pcall(vim.api.nvim_buf_get_var, bufnr, "bigfile_disable_treesitter")
 				return ok and is_large_file
 			end,
@@ -42,6 +47,7 @@ return vim.schedule_wrap(function()
 		textobjects = {
 			select = {
 				enable = true,
+                disable = { 'latex' },
 				keymaps = {
 					["af"] = "@function.outer",
 					["if"] = "@function.inner",
@@ -49,8 +55,10 @@ return vim.schedule_wrap(function()
 					["ic"] = "@class.inner",
 				},
 			},
+ 
 			move = {
 				enable = true,
+                disable = { 'latex' },
 				set_jumps = true, -- whether to set jumps in the jumplist
 				goto_next_start = {
 					["]["] = "@function.outer",

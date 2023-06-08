@@ -1,9 +1,9 @@
 local custom = {}
 
 custom['lervag/vimtex'] = {
-    lazy = true,
+    lazy = false,
     ft = { "tex" },
-    opts = { pattern = { "*.tex" } },
+    -- opts = { pattern = { "*.tex" } },
     config = require("custom.vimtex"),
 }
 

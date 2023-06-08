@@ -89,6 +89,7 @@ settings["lsp_deps"] = {
 	"jsonls",
 	"lua_ls",
 	"pylsp",
+    "matlab_ls"
 	-- "gopls",
 }
 
