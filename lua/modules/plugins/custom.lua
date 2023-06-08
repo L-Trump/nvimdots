@@ -23,4 +23,11 @@ custom['andrewferrier/wrapping.nvim'] = {
 	event = "BufWinEnter",
 }
 
+custom['chipsenkbeil/distant.nvim'] = {
+    branch = 'v0.2',
+    lazy = true,
+    event = "VeryLazy",
+    config = require("custom.distant")
+}
+
 return custom

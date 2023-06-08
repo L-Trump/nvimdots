@@ -46,7 +46,7 @@ local plug_map = {
     ['v|<leader>\''] = map_cmd("\"5c'<C-r>\"'<ESC>"):with_silent():with_desc("editor: embrace with ''"),
     -- 取消符号包裹 - VISUAL
     ['v|<leader><leader>"'] = map_cmd('a"l:s/\\%V"\\(\\_.*\\)"\\%V/\\1/g<CR>gvhh<ESC>'):with_silent():with_desc('editor: cancel embrace ""'),
-    ["v|<leader><leader>n'"] = map_cmd('a\'l:s/\\%V\'\\(\\_.*\\)\'\\%V/\\1/g<CR>gvhh<ESC>'):with_silent():with_desc('editor: cancel embrace \'\''),
+    ["v|<leader><leader>'"] = map_cmd('a\'l:s/\\%V\'\\(\\_.*\\)\'\\%V/\\1/g<CR>gvhh<ESC>'):with_silent():with_desc('editor: cancel embrace \'\''),
     -- 打开终端
 	["n|<leader>tm"] = map_cmd("<Cmd>ToggleTerm<CR>"):with_noremap():with_silent():with_desc("terminal: Toggle horizontal"),
 }
