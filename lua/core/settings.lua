@@ -89,7 +89,8 @@ settings["lsp_deps"] = {
 	"jsonls",
 	"lua_ls",
 	"pylsp",
-    "matlab_ls"
+    "matlab_ls",
+    "rust_analyzer"
 	-- "gopls",
 }
 
@@ -101,6 +102,7 @@ settings["lsp_deps"] = {
 settings["null_ls_deps"] = {
 	"clang_format",
 	"prettier",
+	"rustfmt",
 	"shfmt",
 	"stylua",
 	"vint",

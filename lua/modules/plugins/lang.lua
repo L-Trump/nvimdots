@@ -12,7 +12,7 @@ lang["simrat39/rust-tools.nvim"] = {
 	config = require("lang.rust-tools"),
 	dependencies = {
         "nvim-lua/plenary.nvim",
-        "rust-lang/rust.vim",
+        -- "rust-lang/rust.vim",
     },
 }
 lang["Saecki/crates.nvim"] = {
