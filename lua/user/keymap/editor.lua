@@ -11,6 +11,8 @@ return {
 	["n|<leader>a"] = map_cmd("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
 	["n|<C-a>"] = map_cmd("ggVG"):with_noremap():with_silent():with_desc("Editor: Select All"),
 
+	["n|x"] = map_cmd("\"_x"):with_noremap():with_silent():with_desc("Delete without global clipboard"),
+
 	-- Comment
 	["n|<C-_>"] = map_callback(function()
 			return vim.v.count == 0 and et("<Plug>(comment_toggle_linewise_current)")

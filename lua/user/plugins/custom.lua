@@ -4,7 +4,7 @@ custom['lervag/vimtex'] = {
     lazy = false,
     ft = { "tex" },
     -- opts = { pattern = { "*.tex" } },
-    config = require("user.configs..vimtex"),
+    config = require("user.configs.vimtex"),
 }
 
 custom['andrewferrier/wrapping.nvim'] = {
@@ -33,6 +33,11 @@ custom['chipsenkbeil/distant.nvim'] = {
 custom['okuuva/auto-save.nvim'] = {
     cmd = "ASToggle",
     event = { "InsertLeave", "TextChanged" },
+}
+
+custom['dapt4/vim-autoSurround'] = {
+    lazy = true,
+    event = "VeryLazy",
 }
 
 return custom
