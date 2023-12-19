@@ -18,8 +18,8 @@ return {
 			return vim.v.count == 0 and et("<Plug>(comment_toggle_linewise_current)")
 				or et("<Plug>(comment_toggle_linewise_count)")
 		end)
-		:with_silent()
-		:with_noremap()
+    :with_silent()
+    :with_noremap()
 		:with_expr()
 		:with_desc("edit: Toggle comment for line"),
 	["x|<C-_>"] = map_cmd("<Plug>(comment_toggle_linewise_visual)gv")
@@ -28,10 +28,11 @@ return {
 		:with_desc("edit: Toggle comment for line with selection"),
 
 	-- 使用符号包裹 - VISUAL
-	['v|<leader>"'] = map_cmd('"5c"<C-r>""<ESC>'):with_silent():with_desc('editor: embrace with ""'),
-	['v|<leader>\''] = map_cmd("\"5c'<C-r>\"'<ESC>"):with_silent():with_desc("editor: embrace with ''"),
+  ['v|<leader>"'] = map_cmd('"5c"<C-r>""<ESC>'):with_noremap():with_silent():with_desc('editor: embrace with ""'),
+  ['v|<leader>\''] = map_cmd("\"5c'<C-r>\"'<ESC>"):with_noremap():with_silent():with_desc("editor: embrace with ''"),
+  -- ['v|<leader>('] = map_cmd('"5c"<C-r>""<ESC>'):with_noremap():with_silent():with_desc('editor: embrace with ""'),
 
 	-- 取消符号包裹 - VISUAL
-	['v|<leader><leader>"'] = map_cmd('a"l:s/\\%V"\\(\\_.*\\)"\\%V/\\1/g<CR>gvhh<ESC>'):with_silent():with_desc('editor: cancel embrace ""'),
-	["v|<leader><leader>'"] = map_cmd('a\'l:s/\\%V\'\\(\\_.*\\)\'\\%V/\\1/g<CR>gvhh<ESC>'):with_silent():with_desc('editor: cancel embrace \'\''),
+	['v|<leader><leader>"'] = map_cmd('a"l:s/\\%V"\\(\\_.*\\)"\\%V/\\1/g<CR>gvhh<ESC>'):with_noremap():with_silent():with_desc('editor: cancel embrace ""'),
+	["v|<leader><leader>'"] = map_cmd('a\'l:s/\\%V\'\\(\\_.*\\)\'\\%V/\\1/g<CR>gvhh<ESC>'):with_noremap():with_silent():with_desc('editor: cancel embrace \'\''),
 }
