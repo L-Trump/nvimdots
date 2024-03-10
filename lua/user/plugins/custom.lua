@@ -50,4 +50,10 @@ custom["kylechui/nvim-surround"] = {
 	end,
 }
 
+custom["gen740/SmoothCursor.nvim"] = {
+	lazy = true,
+	event = "CursorMoved",
+	config = require("user.configs.smoothcursor"),
+}
+
 return custom

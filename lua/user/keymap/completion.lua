@@ -15,6 +15,24 @@ mappings["lsp"] = function(buf)
 	return {
 		-- Example
 		["n|K"] = require("keymap.bind").map_cr("Lspsaga hover_doc"):with_buffer(buf):with_desc("lsp: Show doc"),
+		["n|<leader>h"] = map_callback(function()
+			local cur_hint = vim.lsp.inlay_hint.is_enabled(buf)
+			vim.lsp.inlay_hint.enable(buf, not cur_hint)
+
+			if cur_hint then
+				vim.notify(
+					"Successfully disabled inlay-hint",
+					vim.log.levels.INFO,
+					{ title = "Settings modification success" }
+				)
+			else
+				vim.notify(
+					"Successfully enabled inlay-hint",
+					vim.log.levels.INFO,
+					{ title = "Settings modification success" }
+				)
+			end
+		end):with_desc("lsp: Toggle inlay hint"),
 	}
 end
 
