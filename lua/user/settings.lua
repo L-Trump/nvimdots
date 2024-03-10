@@ -21,4 +21,8 @@ settings["treesitter_deps"] = {
 	"matlab",
 }
 
+settings["disabled_plugins"] = {
+  "edluffy/specs.nvim",
+}
+
 return settings
