@@ -50,10 +50,16 @@ custom["kylechui/nvim-surround"] = {
 	end,
 }
 
-custom["gen740/SmoothCursor.nvim"] = {
+-- custom["gen740/SmoothCursor.nvim"] = {
+-- 	lazy = true,
+-- 	event = "CursorMoved",
+-- 	config = require("user.configs.smoothcursor"),
+-- }
+
+custom["max397574/better-escape.nvim"] = {
 	lazy = true,
-	event = "CursorMoved",
-	config = require("user.configs.smoothcursor"),
+	event = { "CursorHold", "CursorHoldI" },
+	config = require("user.configs.better-escape"),
 }
 
 return custom
