@@ -11,6 +11,12 @@ tool["tpope/vim-fugitive"] = {
 -- 	cond = vim.fn.executable("fcitx5-remote") == 1,
 -- 	config = require("tool.fcitx5"),
 -- }
+tool["Bekaboo/dropbar.nvim"] = {
+	lazy = false,
+	dependencies = {
+		"nvim-telescope/telescope-fzf-native.nvim",
+	},
+}
 tool["nvim-tree/nvim-tree.lua"] = {
 	lazy = true,
 	cmd = {
@@ -21,11 +27,6 @@ tool["nvim-tree/nvim-tree.lua"] = {
 		"NvimTreeRefresh",
 	},
 	config = require("tool.nvim-tree"),
-}
-tool["ibhagwan/smartyank.nvim"] = {
-	lazy = true,
-	event = "BufReadPost",
-	config = require("tool.smartyank"),
 }
 tool["michaelb/sniprun"] = {
 	lazy = true,
@@ -56,6 +57,12 @@ tool["folke/which-key.nvim"] = {
 	lazy = true,
 	event = { "CursorHold", "CursorHoldI" },
 	config = require("tool.which-key"),
+}
+tool["gelguy/wilder.nvim"] = {
+	lazy = true,
+	event = "CmdlineEnter",
+	config = require("tool.wilder"),
+	dependencies = { "romgrk/fzy-lua-native" },
 }
 
 ----------------------------------------------------------------------
