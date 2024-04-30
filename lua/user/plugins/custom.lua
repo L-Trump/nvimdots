@@ -62,4 +62,13 @@ custom["max397574/better-escape.nvim"] = {
 	config = require("user.configs.better-escape"),
 }
 
+-- add inlay hints for nvim 0.9
+custom["lvimuser/lsp-inlayhints.nvim"] = {
+	lazy = true,
+	event = "BufWinEnter",
+	config = function()
+		require("lsp-inlayhints").setup()
+	end
+}
+
 return custom
