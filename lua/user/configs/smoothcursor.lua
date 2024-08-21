@@ -1,5 +1,5 @@
 return function()
-	require("smoothcursor").setup({
+  require("smoothcursor").setup({
     speed = 40,
     intervals = 20,
   })
