@@ -62,4 +62,13 @@ custom["max397574/better-escape.nvim"] = {
 	config = require("user.configs.better-escape"),
 }
 
+custom["mikesmithgh/kitty-scrollback.nvim"] = {
+	lazy = true,
+	cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+	event = { 'User KittyScrollbackLaunch' },
+	config = function()
+		require('kitty-scrollback').setup()
+	end,
+}
+
 return custom
